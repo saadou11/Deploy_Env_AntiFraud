@@ -1,0 +1,17 @@
+external:
+ type: LoadBalancer
+ # annotations:
+ # service.beta.kubernetes.io/openstack-internal-load-balancer: “true”
+ dns:
+ useInternal: false
+ useExternal: false
+ # create an A record for each statefulset pod
+ distinct: false
+ enabled: true
+ servicePort: 19092
+ firstListenerPort: 31090
+ domain: cluster.local
+ loadBalancerIP: 
+  — 13.77.176.999
+  — 52.247.212.999
+  — 13.66.160.999
